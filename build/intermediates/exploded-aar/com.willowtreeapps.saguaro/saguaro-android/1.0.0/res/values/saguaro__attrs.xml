@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="saguaro__isFullVersionText" format="boolean" />
+
+    <declare-styleable name="VersionTextView">
+        <attr name="saguaro__isFullVersionText" />
+    </declare-styleable>
+
+    <string-array name="saguaro__base_licenses">
+        <item>apache2</item>
+        <item>bsd2</item>
+        <item>mit</item>
+        <item>ccpl3</item>
+    </string-array>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="saguaro__full_version_text_dynamic">Version %1$s build %2$s</string>
+    <string name="saguaro__close">Close</string>
+    <string name="saguaro__acknowledgments">Acknowledgments</string>
+    <string name="saguaro__send_feedback">Send Feedback</string>
+    <string name="saguaro__feedback_subject">%1$s Android Feedback</string>
+    <string name="saguaro__licenses_header">%1$s would like to acknowledge:</string>
+    <string name="saguaro__this_application">This application</string>
+    <string name="saguaro__license_subheader">Each of the above projects is licensed under the %1$s.</string>
+
+    <string name="apache2_name">Apache License, Version 2.0</string>
+    <string name="bsd2_name">BSD 2-Clause License</string>
+    <string name="mit_name">MIT License (MIT)</string>
+    <string name="ccpl3_name">Creative Commons Public License, Attribution 3.0</string>
+</resources>
+

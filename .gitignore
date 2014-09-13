@@ -1,4 +1,9 @@
 .gradle
+.idea/
+*.iml
+*.iws
+log/
+target/
 /local.properties
 /.idea/workspace.xml
 .DS_Store

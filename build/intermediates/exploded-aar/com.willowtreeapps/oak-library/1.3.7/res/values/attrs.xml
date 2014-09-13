@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="oakFont" />
+
+    <declare-styleable name="TextViewWithFont">
+        <attr name="oakFont" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxWithFont">
+        <attr name="oakFont" />
+    </declare-styleable>
+
+    <declare-styleable name="CancelEditText">
+        <attr name="oakFont" />
+        <attr name="oakCancelDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonWithFont">
+        <attr name="oakFont" />
+    </declare-styleable>
+
+    <declare-styleable name="ResizedTextView">
+        <attr name="oakMinTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RatioLinearLayout">
+        <attr name="oakRatioWidth" format="integer|reference" />
+        <attr name="oakRatioHeight" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioLayout">
+        <attr name="oakAspectRatio" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="MaskedImageView">
+        <attr name="oakFillColor" format="color" />
+        <attr name="oakGlareColor" format="color" />
+        <attr name="oakMask" format="integer" />
+        <attr name="oakOverlay" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCircularProgressBar">
+        <attr name="oakProgressBarDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BeastTextView">
+        <attr name="oakColors" format="integer|reference" />
+        <attr name="oakPositions" format="integer|reference" />
+        <attr name="oakAngle" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SpreadsheetView">
+        <attr name="dataCellDrawable" format="reference" />
+        <attr name="dataCellSelectedDrawable" format="reference" />
+        <attr name="stickyColumnCellDrawable" format="reference" />
+        <attr name="stickyColumnCellSelectedDrawable" format="reference" />
+        <attr name="stickyHeaderCellDrawable" format="reference" />
+        <attr name="stickyHeaderCellSelectedDrawable" format="reference" />
+        <attr name="stickyFooterCellDrawable" format="reference" />
+        <attr name="stickyFooterCellSelectedDrawable" format="reference" />
+        <attr name="leftHeaderCornerCellDrawable" format="reference" />
+        <attr name="leftHeaderCornerCellSelectedDrawable" format="reference" />
+        <attr name="leftFooterCornerCellDrawable" format="reference" />
+        <attr name="leftFooterCornerCellSelectedDrawable" format="reference" />
+        <attr name="cellTextColor" format="color" />
+        <attr name="cellSelectedTextColor" format="color" />
+        <attr name="dataCellTextColor" format="color" />
+        <attr name="dataCellSelectedTextColor" format="color" />
+        <attr name="stickyColumnCellTextColor" format="color" />
+        <attr name="stickyColumnCellSelectedTextColor" format="color" />
+        <attr name="stickyHeaderCellTextColor" format="color" />
+        <attr name="stickyHeaderCellSelectedTextColor" format="color" />
+        <attr name="stickyFooterCellTextColor" format="color" />
+        <attr name="stickyFooterCellSelectedTextColor" format="color" />
+        <attr name="cellTextSize" format="dimension" />
+        <attr name="cellFont" format="string|reference" />
+        <attr name="verticalDividingLineWidth" format="dimension" />
+        <attr name="verticalDividingLineColor" format="color" />
+        <attr name="horizontalDividingLineWidth" format="dimension" />
+        <attr name="horizontalDividingLineColor" format="color" />
+        <attr name="showFooter" format="boolean|reference" />
+        <attr name="footerHeight" format="dimension" />
+        <attr name="headerHeight" format="dimension" />
+        <attr name="cellWidth" format="dimension" />
+        <attr name="cellHeight" format="dimension" />
+        <attr name="stickyColumns" format="integer|reference" />
+        <attr name="cellHorizontalBorderWidth" format="dimension" />
+        <attr name="cellVerticalBorderWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiDirectionSlidingDrawer">
+        <attr name="oakBottomOffset" format="dimension" />
+        <attr name="oakTopOffset" format="dimension" />
+        <attr name="oakTopMargin" format="dimension" />
+        <attr name="oakAllowSingleTap" format="boolean|reference" />
+        <attr name="oakAnimateOnClick" format="boolean|reference" />
+        <attr name="oakHandle" format="reference" />
+        <attr name="oakContent" format="reference" />
+        <attr name="oakDirection" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AnimatedSvgView">
+        <attr name="oakSvgImageSizeX" format="integer" />
+        <attr name="oakSvgImageSizeY" format="integer" />
+        <attr name="oakSvgTraceTime" format="string" />
+        <attr name="oakSvgTraceTimePerGlyph" format="string" />
+        <attr name="oakSvgFillStart" format="string" />
+        <attr name="oakSvgFillTime" format="string" />
+    </declare-styleable>
+
+</resources>

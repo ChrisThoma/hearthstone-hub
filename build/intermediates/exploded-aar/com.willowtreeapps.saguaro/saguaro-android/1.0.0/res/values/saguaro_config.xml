@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mit_licensed_projects" />
+    <string-array name="apache_2_0_licensed_projects" />
+    <string name="prepend_acknowledgments_text" />
+
+    <string name="send_feedback_email" />
+    <string name="send_feedback_optional_subject" />
+    <string name="send_feedback_optional_body" />
+    <string-array name="saguaro_licenses"/>
+    <string name="default_version_text_dynamic">v%1$s.%2$s</string>
+</resources>
