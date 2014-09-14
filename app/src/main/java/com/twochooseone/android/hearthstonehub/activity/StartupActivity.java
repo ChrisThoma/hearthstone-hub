@@ -1,4 +1,4 @@
-package com.twochooseone.android.hearthstonehub;
+package com.twochooseone.android.hearthstonehub.activity;
 
 
 import android.graphics.PixelFormat;
@@ -8,6 +8,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.Window;
 import android.support.v7.app.ActionBarActivity;
+
+import com.twochooseone.android.hearthstonehub.MainApp;
+import com.twochooseone.android.hearthstonehub.R;
 
 public class StartupActivity extends ActionBarActivity {
 
