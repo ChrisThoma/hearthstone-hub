@@ -5,6 +5,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 
+
 import com.twochooseone.android.hearthstonehub.R;
 
 import butterknife.ButterKnife;
@@ -28,7 +29,6 @@ public class HomeActivity extends HearthstoneBaseActivity {
         ButterKnife.inject(this);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("HEARTHSTONE HUB");
-        drawerToggle = new ActionBarDrawerToggle()
 
     }
 

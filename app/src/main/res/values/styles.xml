@@ -25,7 +25,7 @@
     <style name="drawerTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">#fff</item>
         <item name="android:textSize">@dimen/drawer_text_size</item>
         <item name="android:paddingTop">@dimen/default_padding</item>
     </style>

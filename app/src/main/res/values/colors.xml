@@ -3,11 +3,11 @@
     <color name="custom_blue">#00edf2</color>
     <color name="custom_red">#f20000</color>
     <color name="custom_green">#55f200</color>
-    <color name="primary">#3F51B5</color>
-    <color name="primary_dark">#1A237E</color>
-    <color name="accent">#536dfe</color>
-    <color name="primary_extremely_light">#E8EAF6</color>
-    <color name="grey">#eeeeee</color>
+    <color name="primary">#757575</color>
+    <color name="primary_dark">#212121</color>
+    <color name="accent">#00769B</color>
+    <color name="primary_extremely_light">#fafafa</color>
+    <color name="grey">#212121</color>
     <color name="pressed_grey">#9e9e9e</color>
 
 </resources>
