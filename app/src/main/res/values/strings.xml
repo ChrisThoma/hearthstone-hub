@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello hearthstone-hub!</string>
     <string name="app_name">hearthstone-hub</string>
+    <string name="okay">okay</string>
 </resources>
