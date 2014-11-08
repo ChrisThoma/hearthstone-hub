@@ -59,5 +59,7 @@ public class MainApp extends Application implements IObjectGraph {
     public ObjectGraph getObjectGraph() {
         return applicationGraph;
     }
+
+    public void inject(Object object) { applicationGraph.inject(object); }
 }
 

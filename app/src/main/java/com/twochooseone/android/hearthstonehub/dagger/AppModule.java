@@ -8,6 +8,10 @@ import com.twochooseone.android.hearthstonehub.Datastore;
 import com.twochooseone.android.hearthstonehub.MainApp;
 import com.squareup.okhttp.OkHttpClient;
 import com.twochooseone.android.hearthstonehub.activity.HomeActivity;
+import com.twochooseone.android.hearthstonehub.fragment.ArenaTiersFragment;
+import com.twochooseone.android.hearthstonehub.fragment.CardsListFragment;
+import com.twochooseone.android.hearthstonehub.fragment.NaxxramasFragment;
+import com.twochooseone.android.hearthstonehub.fragment.YourDecksFragment;
 
 import java.net.URL;
 
@@ -18,7 +22,11 @@ import dagger.Provides;
 @Module(injects = {
         Injector.class,
         MainApp.class,
-        HomeActivity.class
+        HomeActivity.class,
+        CardsListFragment.class,
+        YourDecksFragment.class,
+        ArenaTiersFragment.class,
+        NaxxramasFragment.class,
 }, library = true, complete = true)
 public class AppModule {
     private final Application application;

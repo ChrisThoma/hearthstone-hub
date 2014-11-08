@@ -8,7 +8,8 @@
     <!-- app content -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <include
             android:id="@+id/toolbar"
@@ -16,8 +17,8 @@
 
         <FrameLayout
             android:id="@+id/frame_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
     </LinearLayout>
     <!-- drawer content -->
     <LinearLayout
@@ -46,6 +47,7 @@
 
 
         <TextView
+            android:id="@+id/drawer_item_cards_list"
             style="@style/drawerTextViewSubItem"
             android:drawableLeft="@drawable/default_card_img"
             android:drawablePadding="41dp"
@@ -59,6 +61,7 @@
             android:background="@color/primary_extremely_light" />
 
         <TextView
+            android:id="@+id/drawer_item_naxx"
             style="@style/drawerTextViewSubItem"
             android:drawableLeft="@drawable/naxx_card_img"
             android:drawablePadding="40dp"
@@ -72,6 +75,7 @@
             android:background="@color/primary_extremely_light" />
 
         <TextView
+            android:id="@+id/drawer_item_arena"
             style="@style/drawerTextViewSubItem"
             android:drawableLeft="@drawable/arena_img"
             android:paddingLeft="11dp"
@@ -86,6 +90,7 @@
             android:background="@color/primary_extremely_light" />
 
         <TextView
+            android:id="@+id/drawer_item_your_decks"
             android:drawableLeft="@drawable/mana_crystal"
             android:paddingLeft="13dp"
             android:drawablePadding="36dp"
