@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- app content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_actionbar" />
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!-- drawer content -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|start"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:background="@color/grey">
+
+        <TextView
+            style="@style/drawerTextView"
+            android:paddingTop="@dimen/extra_large_padding"
+            android:paddingBottom="@dimen/extra_large_padding"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#616161"
+            android:text="SELECT CATEGORY" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/drawer_divider_padding"
+            android:layout_marginRight="@dimen/drawer_divider_padding"
+            android:background="#616161" />
+
+
+        <TextView
+            style="@style/drawerTextViewSubItem"
+            android:drawableLeft="@drawable/default_card_img"
+            android:drawablePadding="41dp"
+            android:text="Cards List" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/drawer_divider_padding"
+            android:layout_marginRight="@dimen/drawer_divider_padding"
+            android:background="@color/primary_dark" />
+
+        <TextView
+            style="@style/drawerTextViewSubItem"
+            android:drawableLeft="@drawable/naxx_card_img"
+            android:drawablePadding="40dp"
+            android:text="Naxxramas" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/drawer_divider_padding"
+            android:layout_marginRight="@dimen/drawer_divider_padding"
+            android:background="@color/primary_dark" />
+
+        <TextView
+            style="@style/drawerTextViewSubItem"
+            android:drawableLeft="@drawable/arena_img"
+            android:paddingLeft="11dp"
+            android:drawablePadding="34dp"
+            android:text="Arena Tiers" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/drawer_divider_padding"
+            android:layout_marginRight="@dimen/drawer_divider_padding"
+            android:background="@color/primary_dark" />
+
+        <TextView
+            android:drawableLeft="@drawable/mana_crystal"
+            android:paddingLeft="13dp"
+            android:drawablePadding="36dp"
+            style="@style/drawerTextViewSubItem"
+            android:text="Your Decks" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/primary_dark" />
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -8,6 +8,8 @@ import android.util.Log;
 
 import javax.inject.Inject;
 import dagger.ObjectGraph;
+import oak.util.PRNGFixes;
+
 import com.twochooseone.android.hearthstonehub.dagger.AppModule;
 import com.twochooseone.android.hearthstonehub.dagger.IObjectGraph;
 
@@ -24,14 +26,6 @@ public class MainApp extends Application implements IObjectGraph {
     public void onCreate() {
         super.onCreate();
         Log.i(TAG, "onCreate");
-
-        /**
-         * Ensure the keys generated for the CryptoSharedPreferences are strong and sufficiently
-         * random.
-         *
-         * See http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html
-         */
-        PRNGFixes.apply();
 
         sContext = this;
         applicationGraph = ObjectGraph.create(getAppModule());

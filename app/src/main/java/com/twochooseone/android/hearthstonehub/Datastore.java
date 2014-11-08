@@ -12,19 +12,18 @@ public class Datastore {
 
     private static final String DEVICE_VERSION = "DeviceVersion";
 
-    EncryptedSharedPreferences encryptedSharedPreferences;
+    SharedPreferences sharedPreferences;
 
     public Datastore(Application app) {
-        encryptedSharedPreferences = new EncryptedSharedPreferences(app,
-                PreferenceManager.getDefaultSharedPreferences(app));
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(app);
     }
 
     private SharedPreferences.Editor getEditor() {
-        return encryptedSharedPreferences.edit();
+        return sharedPreferences.edit();
     }
 
     private SharedPreferences getPrefs() {
-        return encryptedSharedPreferences;
+        return sharedPreferences;
     }
     public int getVersion() {
         return getPrefs().getInt(DEVICE_VERSION, 0);

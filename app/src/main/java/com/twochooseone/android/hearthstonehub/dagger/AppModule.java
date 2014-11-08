@@ -7,6 +7,7 @@ import dagger.Module;
 import com.twochooseone.android.hearthstonehub.Datastore;
 import com.twochooseone.android.hearthstonehub.MainApp;
 import com.squareup.okhttp.OkHttpClient;
+import com.twochooseone.android.hearthstonehub.activity.HomeActivity;
 
 import java.net.URL;
 
@@ -17,6 +18,7 @@ import dagger.Provides;
 @Module(injects = {
         Injector.class,
         MainApp.class,
+        HomeActivity.class
 }, library = true, complete = true)
 public class AppModule {
     private final Application application;
