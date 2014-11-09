@@ -13,11 +13,20 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.twochooseone.android.hearthstonehub.R;
+import com.twochooseone.android.hearthstonehub.api.model.Card;
+import com.twochooseone.android.hearthstonehub.api.model.CardsList;
 import com.twochooseone.android.hearthstonehub.fragment.ArenaTiersFragment;
 import com.twochooseone.android.hearthstonehub.fragment.CardsListFragment;
 import com.twochooseone.android.hearthstonehub.fragment.NaxxramasFragment;
 import com.twochooseone.android.hearthstonehub.fragment.YourDecksFragment;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -43,6 +52,8 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
     TextView selected;
     @InjectView(R.id.frame_container)
     FrameLayout frameLayout;
+    Gson gson = new Gson();
+    CardsList cardsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -65,8 +76,38 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
         drawerArena.setOnClickListener(this);
         drawerYourDecks.setOnClickListener(this);
 
+
+        Type type = new TypeToken<CardsList>() {
+        }.getType();
+        cardsList = gson.fromJson(loadJSONFromAsset(), type);
+
         selected = drawerCardsList;
         drawerCardsList.callOnClick();
+    }
+
+    public String loadJSONFromAsset() {
+        String json = null;
+        try {
+
+            InputStream is = getAssets().open("json/cards.json");
+
+            int size = is.available();
+
+            byte[] buffer = new byte[size];
+
+            is.read(buffer);
+
+            is.close();
+
+            cardsjson = new String(buffer, "UTF-8");
+
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+
     }
 
     @Override
