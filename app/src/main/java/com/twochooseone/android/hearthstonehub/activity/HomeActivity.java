@@ -76,11 +76,6 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
         drawerArena.setOnClickListener(this);
         drawerYourDecks.setOnClickListener(this);
 
-
-        Type type = new TypeToken<CardsList>() {
-        }.getType();
-        cardsList = gson.fromJson(loadJSONFromAsset(), type);
-
         selected = drawerCardsList;
         drawerCardsList.callOnClick();
     }
@@ -99,7 +94,7 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
 
             is.close();
 
-            cardsjson = new String(buffer, "UTF-8");
+            json = new String(buffer, "UTF-8");
 
 
         } catch (IOException ex) {
@@ -107,7 +102,6 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
             return null;
         }
         return json;
-
     }
 
     @Override

@@ -6,12 +6,13 @@
 
     <application android:name=".MainApp" android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" android:theme="@style/Theme.HearthstoneHub">
-        <activity android:name=".activity.HomeActivity">
+        <activity android:name=".activity.DBInitializeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.HomeActivity"/>
     </application>
 
 </manifest>

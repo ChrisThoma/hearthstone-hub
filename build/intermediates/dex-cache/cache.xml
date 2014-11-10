@@ -44,11 +44,35 @@
         revision="21.0.0"
         sha1="a60a5e993c98c864010053cb901b7eab25306568"/>
     <item
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/classes-4732c4dc98fcbc6f13bd2200f3014571f12d2b61.jar"
+        jar="/Users/christhoma/PersonalApps/hearthstone-hub/build/intermediates/exploded-aar/com.couchbase.lite/couchbase-lite-android/1.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="adcc7c8d67dd73b6666a85ac8d0d7a9afcd1564d"/>
+    <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/classes-5d7a4fc773663b2d5b205c411f2399dd451fdb55.jar"
         jar="/Users/christhoma/PersonalApps/hearthstone-hub/build/intermediates/exploded-aar/com.android.support/palette-v7/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.0.0"
         sha1="b65c2fede61220ed2b6a063f11ca13160910089e"/>
+    <item
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/couchbase-lite-java-core-1.0.2-4b4dde2c85efdc91afc98c39ad4fbc67d0dccd22.jar"
+        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.couchbase.lite/couchbase-lite-java-core/1.0.2/fe2b420eace015de4b639de21ef8814ab749475e/couchbase-lite-java-core-1.0.2.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="fe2b420eace015de4b639de21ef8814ab749475e"/>
+    <item
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/jackson-mapper-asl-1.9.2-060d9730db577f6c2fb51eb254750bf32a8bbdaa.jar"
+        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.2/95400a7922ce75383866eb72f6ef4a7897923945/jackson-mapper-asl-1.9.2.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="95400a7922ce75383866eb72f6ef4a7897923945"/>
+    <item
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/jackson-core-asl-1.9.2-a1e8247a1e2d5a4e493f9e3dab5b9456a3da3a1c.jar"
+        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.2/8493982bba1727106d767034bd0d8e77bc1931a9/jackson-core-asl-1.9.2.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="8493982bba1727106d767034bd0d8e77bc1931a9"/>
     <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/picasso-2.2.0-9f78667a7f69f8801d1192fb9d7b44f9b2e70ca2.jar"
         jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.2.0/74137f8d9aac26dd9463efe32271f2be8d41cda9/picasso-2.2.0.jar"
@@ -62,8 +86,8 @@
         revision="21.0.0"
         sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
     <item
-        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-ee576f91b45a6538d4156fc6e674b6f65034f74e.jar"
-        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-ced83c3a22c022e9b82505e9b264cb14418865ab.jar"
+        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/21.0.0/1a578b9607b36266c63d43a4fa0ab5664dbe911e/support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.0.0"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
