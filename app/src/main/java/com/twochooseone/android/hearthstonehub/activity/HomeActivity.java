@@ -65,6 +65,7 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.okay, R.string.oak_test) {
 
         };
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.hamburger);
 
         drawerLayout.setDrawerListener(drawerToggle);
 
@@ -84,7 +85,7 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
         String json = null;
         try {
 
-            InputStream is = getAssets().open("json/cards.json");
+            InputStream is = getAssets().open("json/basic.json");
 
             int size = is.available();
 
