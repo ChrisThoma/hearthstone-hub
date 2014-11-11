@@ -20,6 +20,12 @@
         revision="21.0.0"
         sha1="a4c97e23b768614eb5e2a1a202638639a414e17f"/>
     <item
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/okhttp-1.6.0-06facddabbc67ffbdc09d7a6e51d1aee6dc33705.jar"
+        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/1.6.0/e32c6b4bee8b61f0de12b337c48df0f5df8caccc/okhttp-1.6.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="e32c6b4bee8b61f0de12b337c48df0f5df8caccc"/>
+    <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/butterknife-4.0.1-08a0775e8c70c681256fa4aa49011ae6d7c3d7af.jar"
         jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/4.0.1/f43b36925363701633d01adb8e54df7150397a78/butterknife-4.0.1.jar"
         jumboMode="false"
@@ -74,11 +80,11 @@
         revision="21.0.0"
         sha1="8493982bba1727106d767034bd0d8e77bc1931a9"/>
     <item
-        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/picasso-2.2.0-9f78667a7f69f8801d1192fb9d7b44f9b2e70ca2.jar"
-        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.2.0/74137f8d9aac26dd9463efe32271f2be8d41cda9/picasso-2.2.0.jar"
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-d896bb5f4fc94f39d393cf301775f8d7311206ee.jar"
+        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
         jumboMode="false"
         revision="21.0.0"
-        sha1="74137f8d9aac26dd9463efe32271f2be8d41cda9"/>
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2"/>
     <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/classes-15da4c1062c9b3d374264c9ec1725a98cd32dfc5.jar"
         jar="/Users/christhoma/PersonalApps/hearthstone-hub/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
@@ -86,29 +92,23 @@
         revision="21.0.0"
         sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
     <item
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-1.6.0-9912288947afa2a7f3e478cc1be71aca47a5c7dd.jar"
+        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-urlconnection/1.6.0/375c2206eb7e52976955d0f8737be5e0ec9cf667/okhttp-urlconnection-1.6.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="375c2206eb7e52976955d0f8737be5e0ec9cf667"/>
+    <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-ced83c3a22c022e9b82505e9b264cb14418865ab.jar"
         jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/21.0.0/1a578b9607b36266c63d43a4fa0ab5664dbe911e/support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.0.0"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
     <item
-        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/okhttp-protocols-1.3.0-a28863034b1405a926b527c5d7d4ad20d331b4f9.jar"
-        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-protocols/1.3.0/dc5d37f18fb61f8df0b2f0b0c476b2b8ab08efbb/okhttp-protocols-1.3.0.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="dc5d37f18fb61f8df0b2f0b0c476b2b8ab08efbb"/>
-    <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/retrofit-1.4.1-a2da080f33c7d59f9047466b9500f7ed637a188b.jar"
         jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.4.1/23de973a4908bc6f5ac6524af3251a19ad81a7b1/retrofit-1.4.1.jar"
         jumboMode="false"
         revision="21.0.0"
         sha1="23de973a4908bc6f5ac6524af3251a19ad81a7b1"/>
-    <item
-        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/okhttp-1.3.0-9129838c700c3f34be9933a38db0e8f57d910bdf.jar"
-        jar="/Users/christhoma/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/1.3.0/6807981105034b34e98353aa17a540f393889c37/okhttp-1.3.0.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="6807981105034b34e98353aa17a540f393889c37"/>
     <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/classes-27d515153f6472babf9a05bca186e9115bfb9ded.jar"
         jar="/Users/christhoma/PersonalApps/hearthstone-hub/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"

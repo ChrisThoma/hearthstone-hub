@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/card_grid_linear">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/name"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/description"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/health"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/attack"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/mana"/>
+    android:id="@+id/card_grid_layout">
 
-</LinearLayout>
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id='@+id/name' />
+
+    <ImageView
+        android:layout_width="76.75dp"
+        android:layout_height="116.25dp"
+        android:id="@+id/card_image"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:id="@+id/description"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/card_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/health"
+        android:layout_below="@id/description"
+        android:layout_toRightOf="@id/card_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/attack"
+        android:layout_below="@id/health"
+        android:layout_toRightOf="@id/card_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mana"
+        android:layout_toRightOf="@id/card_image"
+        android:layout_below="@id/attack" />
+
+</RelativeLayout>

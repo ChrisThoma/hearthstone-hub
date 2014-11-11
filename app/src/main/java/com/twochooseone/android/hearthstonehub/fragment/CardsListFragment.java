@@ -27,6 +27,7 @@ import org.json.JSONObject;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -37,7 +38,7 @@ import butterknife.InjectView;
 /**
  * Created by christhoma on 11/8/14.
  */
-public class CardsListFragment extends HearthstoneBaseFragment implements LoaderManager.LoaderCallbacks<Map<String, Object>> {
+public class CardsListFragment extends HearthstoneBaseFragment implements LoaderManager.LoaderCallbacks<ArrayList<Card>> {
 
     @InjectView(R.id.progress)
     ProgressBar progressBar;
@@ -60,8 +61,8 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
 //            String id = ((QueryRow)((ArrayList)map.get("rows")).get(0)).getDocument().getId();
 //            Document doc = db.getDocument(id);
 //            Map<String, Object> props = doc.getProperties();
-////            Document doc = db.getDocument((String)((ArrayList)map.get("rows")).get(0));
-////            tview.setText((String)doc.getProperty("name"));
+//            Document doc = db.getDocument((String)((ArrayList)map.get("rows")).get(0));
+//            tview.setText((String)doc.getProperty("name"));
 //            tview.setText((String)props.get("name"));
 //            com.couchbase.lite.Query query = db.createAllDocumentsQuery();
 //            query.setStartKey("name");
@@ -81,28 +82,20 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
     }
 
     @Override
-    public Loader<Map<String, Object>> onCreateLoader(int i, Bundle bundle) {
+    public Loader<ArrayList<Card>> onCreateLoader(int i, Bundle bundle) {
         return new CardLoader(getActivity(), db);
     }
 
     @Override
-    public void onLoadFinished(Loader<Map<String, Object>> hashMapLoader, Map<String, Object> stringObjectHashMap) {
+    public void onLoadFinished(Loader<ArrayList<Card>> hashMapLoader, ArrayList<Card> cards) {
         progressBar.setVisibility(View.GONE);
-        String json = gson.toJson(stringObjectHashMap);
-        Type type = new TypeToken<Card>() {
-        }.getType();
-        Card card = gson.fromJson(json , type);
-        ArrayList<Card> cards = new ArrayList<Card>();
-        cards.add(card);
         adapter = new CardsGridAdapter(cards, getActivity());
         cardsGrid.setAdapter(adapter);
         cardsGrid.setVisibility(View.VISIBLE);
-//        tview.setText((String)stringObjectHashMap.get("name") + " " +  (String)stringObjectHashMap.get("text"));
-//        tview.setText(card.name);
     }
 
     @Override
-    public void onLoaderReset(Loader<Map<String, Object>> hashMapLoader) {
+    public void onLoaderReset(Loader<ArrayList<Card>> hashMapLoader) {
 
     }
 }

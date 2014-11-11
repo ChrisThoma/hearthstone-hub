@@ -69,6 +69,7 @@ public class DBInitializeActivity extends HearthstoneBaseActivity {
         }
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public String loadJSONFromAsset() {
