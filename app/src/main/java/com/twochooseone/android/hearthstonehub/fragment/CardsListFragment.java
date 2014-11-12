@@ -42,8 +42,6 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
 
     @InjectView(R.id.progress)
     ProgressBar progressBar;
-    @InjectView(R.id.test_tv)
-    TextView tview;
     @InjectView(R.id.cards_grid)
     GridView cardsGrid;
     @Inject

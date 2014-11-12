@@ -2,7 +2,8 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/less_dark_grey">
 
     <ProgressBar
         android:id="@+id/progress"
@@ -12,11 +13,16 @@
         android:layout_centerInParent="true" />
 
     <TextView
-        android:id="@+id/test_tv"
+        android:id="@+id/loading_text"
+        android:layout_centerHorizontal="true"
+        android:text="LOADING CARDS FROM DB"
+        android:textColor="#fff"
+        android:layout_above="@id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <GridView
+        android:background="@color/less_dark_grey"
         android:visibility="gone"
         android:id="@+id/cards_grid"
         android:layout_width="fill_parent"

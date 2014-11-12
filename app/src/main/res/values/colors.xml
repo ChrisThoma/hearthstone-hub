@@ -8,6 +8,8 @@
     <color name="accent">#00769B</color>
     <color name="primary_extremely_light">#fafafa</color>
     <color name="grey">#212121</color>
+    <color name="less_dark_grey">#424242</color>
+    <color name="less_less_dark_grey">#616161</color>
     <color name="pressed_grey">#9e9e9e</color>
 
 </resources>

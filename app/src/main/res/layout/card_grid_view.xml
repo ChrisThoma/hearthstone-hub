@@ -5,68 +5,84 @@
     android:id="@+id/grid_cardview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    card_view:cardElevation="4dp"
-    card_view:cardCornerRadius="1dp">
+    android:background="@color/grey"
+    card_view:cardElevation="5dp"
+    card_view:cardCornerRadius="5dp"
+    style="@style/CardView.Dark">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/card_grid_layout"
-    android:paddingLeft="@dimen/default_padding"
-    android:paddingRight="@dimen/default_padding"
-    android:paddingBottom="@dimen/default_padding">
-
-    <TextView
-        android:layout_alignParentTop="true"
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id='@+id/name'
-        android:textSize="15sp"
-        android:textColor="@color/primary_dark" />
+        android:layout_height="fill_parent"
+        android:id="@+id/card_grid_layout"
+        android:background="@null"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding"
+        android:paddingBottom="@dimen/default_padding">
 
-    <ImageView
-        android:layout_width="76.75dp"
-        android:layout_height="116.25dp"
-        android:id="@+id/card_image"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/name" />
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id='@+id/name'
+            android:textSize="15sp"
+            android:textColor="@color/primary_extremely_light" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="3"
-        android:ellipsize="end"
-        android:textSize="10sp"
-        android:id="@+id/description"
-        android:layout_below="@id/name"
-        android:layout_toRightOf="@id/card_image" />
+        <ImageView
+            android:layout_width="76.75dp"
+            android:layout_height="116.25dp"
+            android:id="@+id/card_image"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/name" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/health"
-        android:drawableLeft="@drawable/health_value"
-        android:drawablePadding="@dimen/default_padding"
-        android:layout_below="@id/description"
-        android:layout_toRightOf="@id/card_image" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/primary_extremely_light"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="10sp"
+            android:id="@+id/description"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/card_image" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/attack"
-        android:layout_below="@id/health"
-        android:drawableLeft="@drawable/attack_value"
-        android:drawablePadding="@dimen/default_padding"
-        android:layout_toRightOf="@id/card_image" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/mana"
-        android:drawableLeft="@drawable/mana_crystal_small"
-        android:drawablePadding="@dimen/default_padding"
-        android:layout_toRightOf="@id/card_image"
-        android:layout_below="@id/attack" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/card_image"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="4dp">
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/primary_extremely_light"
+                android:layout_height="wrap_content"
+                android:id="@+id/mana"
+                android:drawableLeft="@drawable/mana_crystal_small"
+                android:drawablePadding="@dimen/default_padding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/primary_extremely_light"
+                android:layout_height="wrap_content"
+                android:id="@+id/attack"
+                android:drawableLeft="@drawable/attack_value"
+                android:drawablePadding="@dimen/default_padding"
+                android:layout_above="@id/mana"
+                android:layout_toRightOf="@id/card_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/primary_extremely_light"
+                android:layout_height="wrap_content"
+                android:id="@+id/health"
+                android:drawableLeft="@drawable/health_value"
+                android:drawablePadding="@dimen/default_padding"
+                android:layout_above="@id/attack"
+                android:layout_toRightOf="@id/card_image" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
 </android.support.v7.widget.CardView>
