@@ -86,7 +86,6 @@ public class CardsGridAdapter extends BaseAdapter  {
         Log.d(MainApp.TAG, "card name: " + card.name + "\n" + "url " + url);
         Picasso.with(context)
                 .load(url)
-                .placeholder(R.drawable.higher_res_card)
                 .fit()
                 .into(holder.image);
         return v;
