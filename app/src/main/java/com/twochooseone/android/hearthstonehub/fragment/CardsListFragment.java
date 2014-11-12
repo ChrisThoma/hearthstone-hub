@@ -78,7 +78,9 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
                 query1.setKeys(keys);
                 QueryEnumerator rowEnum = query1.run();
              */
-        getActivity().getSupportLoaderManager().restartLoader(1, null, this);
+        if (cardsGrid.getAdapter() == null || cardsGrid.getAdapter().getCount() <= 0) {
+            getActivity().getSupportLoaderManager().restartLoader(1, null, this);
+        }
         return v;
     }
 

@@ -100,12 +100,6 @@ public class CardDetailActivity extends HearthstoneBaseActivity {
             flavor.setVisibility(View.GONE);
         }
         rarity.setText("Rarity: " + card.rarity);
-        if (!TextUtils.isEmpty(card.playText)) {
-            playText.setText("Play Text: " + Html.fromHtml(card.playText));
-            playText.setVisibility(View.VISIBLE);
-        } else {
-            playText.setVisibility(View.GONE);
-        }
     }
 
     @Override

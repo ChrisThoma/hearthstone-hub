@@ -124,27 +124,39 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
         switch (v.getId()) {
             case R.id.drawer_item_cards_list:
                 changeSelected(drawerCardsList);
-                Fragment fragment = new CardsListFragment();
+                Fragment fragment = getSupportFragmentManager().findFragmentByTag(CardsListFragment.class.getName());
+                if (fragment == null) {
+                    fragment = CardsListFragment.instantiate(this, CardsListFragment.class.getName());
+                }
                 FragmentManager fm = getSupportFragmentManager();
-                fm.beginTransaction().replace(R.id.frame_container, fragment).commit();
+                fm.beginTransaction().replace(R.id.frame_container, fragment, CardsListFragment.class.getName()).commit();
                 break;
             case R.id.drawer_item_naxx:
                 changeSelected(drawerNaxx);
-                fragment = new NaxxramasFragment();
+                fragment = getSupportFragmentManager().findFragmentByTag(NaxxramasFragment.class.getName());
+                if (fragment == null) {
+                    fragment = CardsListFragment.instantiate(this, NaxxramasFragment.class.getName());
+                }
                 fm = getSupportFragmentManager();
-                fm.beginTransaction().replace(R.id.frame_container, fragment).commit();
+                fm.beginTransaction().replace(R.id.frame_container, fragment, NaxxramasFragment.class.getName()).commit();
                 break;
             case R.id.drawer_item_arena:
                 changeSelected(drawerArena);
-                fragment = new ArenaTiersFragment();
+                fragment = getSupportFragmentManager().findFragmentByTag(ArenaTiersFragment.class.getName());
+                if (fragment == null) {
+                    fragment = CardsListFragment.instantiate(this, ArenaTiersFragment.class.getName());
+                }
                 fm = getSupportFragmentManager();
-                fm.beginTransaction().replace(R.id.frame_container, fragment).commit();
+                fm.beginTransaction().replace(R.id.frame_container, fragment, ArenaTiersFragment.class.getName()).commit();
                 break;
             case R.id.drawer_item_your_decks:
                 changeSelected(drawerYourDecks);
-                fragment = new YourDecksFragment();
+                fragment = getSupportFragmentManager().findFragmentByTag(YourDecksFragment.class.getName());
+                if (fragment == null) {
+                    fragment = CardsListFragment.instantiate(this, YourDecksFragment.class.getName());
+                }
                 fm = getSupportFragmentManager();
-                fm.beginTransaction().replace(R.id.frame_container, fragment).commit();
+                fm.beginTransaction().replace(R.id.frame_container, fragment, YourDecksFragment.class.getName()).commit();
                 break;
         }
         drawerLayout.closeDrawers();

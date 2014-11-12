@@ -25,7 +25,6 @@ public class Card implements Comparator<Card>, Comparable<Card> {
     public String playerClass;
     public ArrayList<String> mechanics;
     public String id;
-    public String playText;
     public transient Spanned htmlText;
 
     @Override
