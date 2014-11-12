@@ -1,5 +1,6 @@
 package com.twochooseone.android.hearthstonehub.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.LoaderManager;
@@ -7,6 +8,7 @@ import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 import com.twochooseone.android.hearthstonehub.R;
+import com.twochooseone.android.hearthstonehub.activity.CardDetailActivity;
 import com.twochooseone.android.hearthstonehub.adapter.CardsGridAdapter;
 import com.twochooseone.android.hearthstonehub.api.loader.CardLoader;
 import com.twochooseone.android.hearthstonehub.api.model.Card;
@@ -90,6 +93,14 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
         adapter = new CardsGridAdapter(cards, getActivity());
         cardsGrid.setAdapter(adapter);
         cardsGrid.setVisibility(View.VISIBLE);
+        cardsGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), CardDetailActivity.class);
+                intent.putExtra(CardDetailActivity.CARDJSON, gson.toJson(adapter.getItem(position)));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

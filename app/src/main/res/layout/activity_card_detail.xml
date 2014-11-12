@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/less_dark_grey">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:id="@+id/image"
+                android:paddingTop="@dimen/default_padding"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="@dimen/default_padding" />
+
+            <View
+                android:layout_below="@id/image"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/divider"
+                android:background="@color/primary" />
+
+            <android.support.v7.widget.CardView
+                android:layout_below="@id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/grey"
+                card_view:cardElevation="5dp"
+                card_view:cardCornerRadius="5dp"
+                style="@style/CardView.Dark">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/default_padding"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/primary_extremely_light"
+                        android:id="@+id/name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_extremely_light"
+                        android:paddingBottom="@dimen/default_padding"
+                        android:id="@+id/description" />
+
+                    <LinearLayout
+                        android:paddingBottom="@dimen/default_padding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary_extremely_light"
+                            android:id="@+id/mana"
+                            android:drawableLeft="@drawable/mana_crystal_small"
+                            android:drawablePadding="@dimen/default_padding"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary_extremely_light"
+                            android:id="@+id/health"
+                            android:drawableLeft="@drawable/health_value"
+                            android:drawablePadding="@dimen/default_padding"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary_extremely_light"
+                            android:id="@+id/attack"
+                            android:drawableLeft="@drawable/attack_value"
+                            android:drawablePadding="@dimen/default_padding"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/default_padding"
+                        android:textColor="@color/primary_extremely_light"
+                        android:id="@+id/type" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/default_padding"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_extremely_light"
+                        android:id="@+id/race" />
+
+                    <TextView
+                        android:paddingBottom="@dimen/default_padding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_extremely_light"
+                        android:id="@+id/player_class" />
+
+                    <TextView
+                        android:paddingBottom="@dimen/default_padding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_extremely_light"
+                        android:id="@+id/rarity" />
+
+                    <TextView
+                        android:paddingBottom="@dimen/default_padding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_extremely_light"
+                        android:id="@+id/flavor" />
+
+                    <TextView
+                        android:paddingBottom="@dimen/default_padding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_extremely_light"
+                        android:id="@+id/play_text" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

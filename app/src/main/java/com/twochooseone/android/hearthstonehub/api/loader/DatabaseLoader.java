@@ -105,7 +105,9 @@ public class DatabaseLoader extends OakAsyncLoader<Boolean> {
                 jsonObj.put("cost", card.cost);
                 jsonObj.put("attack", card.attack);
                 jsonObj.put("health", card.health);
-                jsonObj.put("cardType", card.cardType);
+                jsonObj.put("race", card.race);
+                jsonObj.put("playerClass", card.playerClass);
+                jsonObj.put("playText", card.playText);
                 jsonObj.put("rarity", card.rarity);
                 jsonObj.put("text", card.text);
                 jsonObj.put("flavor", card.flavor);

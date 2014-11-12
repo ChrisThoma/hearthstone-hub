@@ -1,6 +1,8 @@
 package com.twochooseone.android.hearthstonehub.api.loader;
 
 import android.content.Context;
+import android.text.Html;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.couchbase.lite.CouchbaseLiteException;
@@ -52,6 +54,9 @@ public class CardLoader extends OakAsyncLoader<ArrayList<Card>> {
                 Card card = gson.fromJson(json , type);
                 if (!card.id.contains("e") && !card.id.contains("o") && !card.type.toLowerCase().contains("hero")) {
                     cards.add(card);
+                }
+                if (card != null & !TextUtils.isEmpty(card.text)) {
+                    card.htmlText = Html.fromHtml(card.text);
                 }
             }
             Collections.sort(cards);

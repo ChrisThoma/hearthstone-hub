@@ -3,6 +3,7 @@ package com.twochooseone.android.hearthstonehub.activity;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
 import android.view.Window;
 
 import com.twochooseone.android.hearthstonehub.MainApp;
@@ -46,4 +47,5 @@ public class HearthstoneBaseActivity extends ActionBarActivity {
     protected void onStop() {
         super.onStop();
     }
+
 }

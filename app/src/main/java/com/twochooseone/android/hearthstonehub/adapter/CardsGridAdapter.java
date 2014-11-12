@@ -75,7 +75,7 @@ public class CardsGridAdapter extends BaseAdapter  {
         holder.name.setText(card.name);
         if (!TextUtils.isEmpty(card.text)) {
             holder.description.setVisibility(View.VISIBLE);
-            holder.description.setText(Html.fromHtml(card.text));
+            holder.description.setText(card.htmlText);
         } else {
             holder.description.setVisibility(View.GONE);
         }

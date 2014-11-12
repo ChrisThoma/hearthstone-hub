@@ -1,7 +1,10 @@
 package com.twochooseone.android.hearthstonehub.api.model;
 
+import android.text.Spanned;
+
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -15,13 +18,15 @@ public class Card implements Comparator<Card>, Comparable<Card> {
     public int cost;
     public int attack;
     public int health;
-    @SerializedName("card_type")
-    public String cardType;
+    public String race;
     public String rarity;
     public String text;
     public String flavor;
+    public String playerClass;
     public ArrayList<String> mechanics;
     public String id;
+    public String playText;
+    public transient Spanned htmlText;
 
     @Override
     public int compare(Card lhs, Card rhs) {
