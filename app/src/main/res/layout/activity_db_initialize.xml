@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="@color/custom_red"
+    android:background="@color/grey"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/Widget.AppCompat.ProgressBar" />
+
     <TextView
+        android:textColor="#000"
+        android:layout_above="@id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOADING DB" />
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.ProgressBar" />
-
-</LinearLayout>
+</RelativeLayout>

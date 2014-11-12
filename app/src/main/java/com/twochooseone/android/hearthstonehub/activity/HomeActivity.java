@@ -85,7 +85,7 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
         String json = null;
         try {
 
-            InputStream is = getAssets().open("json/basic.json");
+            InputStream is = getAssets().open("json/cards.json");
 
             int size = is.available();
 

@@ -110,6 +110,12 @@
         revision="21.0.0"
         sha1="23de973a4908bc6f5ac6524af3251a19ad81a7b1"/>
     <item
+        dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/classes-f6d31a3c8d6b2f9e022144750d7838bd402f7f50.jar"
+        jar="/Users/christhoma/PersonalApps/hearthstone-hub/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
+    <item
         dex="/Users/christhoma/PersonalApps/hearthstone-hub/app/build/intermediates/pre-dexed/debug/classes-27d515153f6472babf9a05bca186e9115bfb9ded.jar"
         jar="/Users/christhoma/PersonalApps/hearthstone-hub/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
         jumboMode="false"
