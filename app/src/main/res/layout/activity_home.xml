@@ -29,10 +29,13 @@
         android:orientation="vertical"
         android:background="@color/grey">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_drawable"/>
+
         <TextView
             style="@style/drawerTextView"
-            android:paddingTop="@dimen/extra_large_padding"
-            android:paddingBottom="@dimen/extra_large_padding"
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="#fff"

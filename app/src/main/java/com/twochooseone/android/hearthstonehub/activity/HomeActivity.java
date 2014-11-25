@@ -1,6 +1,6 @@
 package com.twochooseone.android.hearthstonehub.activity;
 
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,9 +14,8 @@ import android.widget.TextView;
 
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.twochooseone.android.hearthstonehub.Const;
 import com.twochooseone.android.hearthstonehub.R;
-import com.twochooseone.android.hearthstonehub.api.model.Card;
 import com.twochooseone.android.hearthstonehub.api.model.CardsList;
 import com.twochooseone.android.hearthstonehub.fragment.ArenaTiersFragment;
 import com.twochooseone.android.hearthstonehub.fragment.CardsListFragment;
@@ -84,20 +83,12 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
     public String loadJSONFromAsset() {
         String json = null;
         try {
-
-            InputStream is = getAssets().open("json/cards.json");
-
+            InputStream is = getAssets().open(Const.CARDS_JSONPATH);
             int size = is.available();
-
             byte[] buffer = new byte[size];
-
             is.read(buffer);
-
             is.close();
-
             json = new String(buffer, "UTF-8");
-
-
         } catch (IOException ex) {
             ex.printStackTrace();
             return null;

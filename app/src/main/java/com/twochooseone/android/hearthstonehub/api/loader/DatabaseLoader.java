@@ -10,6 +10,7 @@ import com.couchbase.lite.Manager;
 import com.couchbase.lite.android.AndroidContext;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.twochooseone.android.hearthstonehub.Const;
 import com.twochooseone.android.hearthstonehub.MainApp;
 import com.twochooseone.android.hearthstonehub.api.model.Card;
 import com.twochooseone.android.hearthstonehub.api.model.CardsList;
@@ -46,15 +47,14 @@ public class DatabaseLoader extends OakAsyncLoader<Boolean> {
             Log.e(MainApp.TAG, e.getMessage());
         }
 
-        String dbName = "hearthstone_db";
-        if (!Manager.isValidDatabaseName(dbName)) {
+        if (!Manager.isValidDatabaseName(Const.HEARTHSTONE_DB)) {
             Log.e(MainApp.TAG, "Bad db name");
             return false;
         }
 
         try {
             if (manager != null) {
-                db = manager.getDatabase(dbName);
+                db = manager.getDatabase(Const.HEARTHSTONE_DB);
                 if (db != null && db.getDocumentCount() <= 0) {
                     Type type = new TypeToken<CardsList>() {
                     }.getType();
@@ -74,20 +74,12 @@ public class DatabaseLoader extends OakAsyncLoader<Boolean> {
     public String loadJSONFromAsset() {
         String json = null;
         try {
-
-            InputStream is = context.getAssets().open("json/cards.json");
-
+            InputStream is = context.getAssets().open(Const.CARDS_JSONPATH);
             int size = is.available();
-
             byte[] buffer = new byte[size];
-
             is.read(buffer);
-
             is.close();
-
             json = new String(buffer, "UTF-8");
-
-
         } catch (IOException ex) {
             ex.printStackTrace();
             return null;
@@ -100,18 +92,18 @@ public class DatabaseLoader extends OakAsyncLoader<Boolean> {
             for (Card card : cardsList.cards) {
                 Document doc  = db.createDocument();
                 HashMap<String, Object> jsonObj = new HashMap<String, Object>();
-                jsonObj.put("name", card.name);
-                jsonObj.put("type", card.type);
-                jsonObj.put("cost", card.cost);
-                jsonObj.put("attack", card.attack);
-                jsonObj.put("health", card.health);
-                jsonObj.put("race", card.race);
-                jsonObj.put("playerClass", card.playerClass);
-                jsonObj.put("rarity", card.rarity);
-                jsonObj.put("text", card.text);
-                jsonObj.put("flavor", card.flavor);
-                jsonObj.put("mechanics", card.mechanics);
-                jsonObj.put("id", card.id);
+                jsonObj.put(Const.CARD_NAME, card.name);
+                jsonObj.put(Const.CARD_TYPE, card.type);
+                jsonObj.put(Const.CARD_COST, card.cost);
+                jsonObj.put(Const.CARD_ATTACK, card.attack);
+                jsonObj.put(Const.CARD_HEALTH, card.health);
+                jsonObj.put(Const.CARD_RACE, card.race);
+                jsonObj.put(Const.CARD_PLAYERCLASS, card.playerClass);
+                jsonObj.put(Const.CARD_RARITY, card.rarity);
+                jsonObj.put(Const.CARD_TEXT, card.text);
+                jsonObj.put(Const.CARD_FLAVOR, card.flavor);
+                jsonObj.put(Const.CARD_MECHANICS, card.mechanics);
+                jsonObj.put(Const.CARD_ID, card.id);
                 try {
                     doc.putProperties(jsonObj);
                 } catch (CouchbaseLiteException e) {

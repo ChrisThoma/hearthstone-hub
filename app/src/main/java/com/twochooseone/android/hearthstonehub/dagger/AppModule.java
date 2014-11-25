@@ -10,6 +10,7 @@ import com.couchbase.lite.CouchbaseLiteException;
 import com.couchbase.lite.Database;
 import com.couchbase.lite.Manager;
 import com.couchbase.lite.android.AndroidContext;
+import com.twochooseone.android.hearthstonehub.Const;
 import com.twochooseone.android.hearthstonehub.Datastore;
 import com.twochooseone.android.hearthstonehub.MainApp;
 import com.squareup.okhttp.OkHttpClient;
@@ -95,7 +96,7 @@ public class AppModule {
     Database providesDatabase() {
         try {
             Manager manager = new Manager(new AndroidContext(application.getApplicationContext()), Manager.DEFAULT_OPTIONS);
-            return manager.getDatabase("hearthstone_db");
+            return manager.getDatabase(Const.HEARTHSTONE_DB);
         } catch (IOException e) {
             Log.d(MainApp.TAG, e.getMessage());
         } catch (CouchbaseLiteException e) {
