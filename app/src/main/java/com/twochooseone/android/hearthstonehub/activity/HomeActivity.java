@@ -1,5 +1,7 @@
 package com.twochooseone.android.hearthstonehub.activity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,9 +9,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -48,6 +52,8 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
     TextView drawerArena;
     @InjectView(R.id.drawer_item_your_decks)
     TextView drawerYourDecks;
+    @InjectView(R.id.logo)
+    ImageView logo;
     TextView selected;
     @InjectView(R.id.frame_container)
     FrameLayout frameLayout;
@@ -59,6 +65,19 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.inject(this);
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.logo_drawable);
+
+        int imageWidth = bitmap.getWidth();
+        int imageHeight = bitmap.getHeight();
+
+        int newWidth = getWindowManager().getDefaultDisplay().getWidth(); //this method should return the width of device screen.
+        newWidth = (int)(newWidth * .8);
+        float scaleFactor = (float)newWidth/(float)imageWidth;
+        int newHeight = (int)(imageHeight * scaleFactor);
+
+        bitmap = Bitmap.createScaledBitmap(bitmap, newWidth, newHeight, true);
+        logo.setImageBitmap(bitmap);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("HEARTHSTONE HUB");
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.okay, R.string.oak_test) {
