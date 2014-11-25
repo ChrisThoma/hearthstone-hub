@@ -43,8 +43,11 @@ public class CardLoader extends OakAsyncLoader<ArrayList<Card>> {
     @Override
     public ArrayList<Card> loadInBackground() {
         try {
+//            Log.d(MainApp.TAG, "START");
+//            db.getView("loadAllCards").createQuery().run();
             Query query1 = db.createAllDocumentsQuery();
             QueryEnumerator rowEnum = query1.run();
+//                    db.getView("loadAllCards").createQuery().run();
             ArrayList<Card> cards = new ArrayList<Card>();
             for (Iterator<QueryRow> it = rowEnum; it.hasNext();) {
                 QueryRow row = it.next();
@@ -59,7 +62,9 @@ public class CardLoader extends OakAsyncLoader<ArrayList<Card>> {
                     card.htmlText = Html.fromHtml(card.text);
                 }
             }
+            Log.d(MainApp.TAG, "START");
             Collections.sort(cards);
+            Log.d(MainApp.TAG, "End");
             return cards;
         } catch (CouchbaseLiteException e) {
             Log.d(MainApp.TAG, e.getMessage());

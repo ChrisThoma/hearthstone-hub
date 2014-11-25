@@ -15,7 +15,9 @@ import android.widget.TextView;
 
 import com.couchbase.lite.Database;
 import com.couchbase.lite.Document;
+import com.couchbase.lite.Emitter;
 import com.couchbase.lite.Manager;
+import com.couchbase.lite.Mapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
@@ -78,6 +80,15 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
                 query1.setKeys(keys);
                 QueryEnumerator rowEnum = query1.run();
              */
+
+        com.couchbase.lite.View view = db.getView("loadAllCards");
+        view.setMap(new Mapper() {
+            @Override
+            public void map(Map<String, Object> stringObjectMap, Emitter emitter) {
+                emitter.emit(stringObjectMap.get("name").toString(), stringObjectMap);
+            }
+        }, "1.0");
+
         if (cardsGrid.getAdapter() == null || cardsGrid.getAdapter().getCount() <= 0) {
             getActivity().getSupportLoaderManager().restartLoader(1, null, this);
         }
