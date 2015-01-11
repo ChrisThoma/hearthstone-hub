@@ -1,16 +1,26 @@
 package com.twochooseone.android.hearthstonehub.fragment;
 
+import android.animation.Animator;
+import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.couchbase.lite.Database;
@@ -21,6 +31,7 @@ import com.couchbase.lite.Mapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
+import com.twochooseone.android.hearthstonehub.MainApp;
 import com.twochooseone.android.hearthstonehub.R;
 import com.twochooseone.android.hearthstonehub.activity.CardDetailActivity;
 import com.twochooseone.android.hearthstonehub.adapter.CardsGridAdapter;
@@ -45,16 +56,38 @@ import butterknife.InjectView;
  */
 public class CardsListFragment extends HearthstoneBaseFragment implements LoaderManager.LoaderCallbacks<ArrayList<Card>> {
 
+    @InjectView(R.id.relview)
+    RelativeLayout layout;
     @InjectView(R.id.progress)
     ProgressBar progressBar;
     @InjectView(R.id.cards_grid)
-    GridView cardsGrid;
+    RecyclerView cardsGrid;
     @Inject
     Manager manager;
     @Inject
     Database db;
+    GridLayoutManager gridLayoutManager;
     CardsGridAdapter adapter;
     Gson gson = new Gson();
+    ViewTreeObserver.OnGlobalLayoutListener observer = new ViewTreeObserver.OnGlobalLayoutListener() {
+        @Override
+        public void onGlobalLayout() {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                int x = (layout.getLeft() + layout.getRight()) / 2;
+                int y = (layout.getTop() + layout.getBottom()) / 2;
+
+                int finalRad = Math.max(layout.getWidth(), layout.getHeight());
+
+                Animator anim = ViewAnimationUtils.createCircularReveal(layout, x, y, 0, finalRad);
+
+                layout.setVisibility(View.VISIBLE);
+                anim.start();
+            } else {
+                layout.setVisibility(View.VISIBLE);
+            }
+            layout.getViewTreeObserver().removeOnGlobalLayoutListener(observer);
+        }
+    };
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -81,15 +114,13 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
                 QueryEnumerator rowEnum = query1.run();
              */
 
-        com.couchbase.lite.View view = db.getView("loadAllCards");
-        view.setMap(new Mapper() {
-            @Override
-            public void map(Map<String, Object> stringObjectMap, Emitter emitter) {
-                emitter.emit(stringObjectMap.get("name").toString(), stringObjectMap);
-            }
-        }, "1.0");
 
-        if (cardsGrid.getAdapter() == null || cardsGrid.getAdapter().getCount() <= 0) {
+        gridLayoutManager = new GridLayoutManager(getActivity(), 2);
+        cardsGrid.setLayoutManager(gridLayoutManager);
+
+        layout.getViewTreeObserver().addOnGlobalLayoutListener(observer);
+
+        if (cardsGrid.getAdapter() == null || cardsGrid.getAdapter().getItemCount() <= 0) {
             getActivity().getSupportLoaderManager().restartLoader(1, null, this);
         }
         return v;
@@ -104,20 +135,16 @@ public class CardsListFragment extends HearthstoneBaseFragment implements Loader
     public void onLoadFinished(Loader<ArrayList<Card>> hashMapLoader, ArrayList<Card> cards) {
         progressBar.setVisibility(View.GONE);
         adapter = new CardsGridAdapter(cards, getActivity());
+        cardsGrid.setItemAnimator(new DefaultItemAnimator());
         cardsGrid.setAdapter(adapter);
         cardsGrid.setVisibility(View.VISIBLE);
-        cardsGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), CardDetailActivity.class);
-                intent.putExtra(CardDetailActivity.CARDJSON, gson.toJson(adapter.getItem(position)));
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
     public void onLoaderReset(Loader<ArrayList<Card>> hashMapLoader) {
 
     }
+
+
+
 }

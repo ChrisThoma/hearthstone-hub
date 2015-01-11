@@ -24,16 +24,17 @@
 
     <style name="drawerTextView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">48dp</item>
         <item name="android:textColor">#fff</item>
         <item name="android:textSize">@dimen/drawer_text_size</item>
         <item name="android:paddingTop">@dimen/default_padding</item>
     </style>
 
     <style name="drawerTextViewSubItem" parent="drawerTextView">
+        <item name="android:stateListAnimator">@anim/raise</item>
         <item name="android:clickable">true</item>
         <item name="android:background">@drawable/drawer_pressed</item>
-        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingLeft">15dp</item>
         <item name="android:paddingBottom">@dimen/default_padding</item>
     </style>
 </resources>

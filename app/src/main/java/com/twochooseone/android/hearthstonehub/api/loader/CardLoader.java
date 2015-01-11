@@ -8,6 +8,8 @@ import android.util.Log;
 import com.couchbase.lite.CouchbaseLiteException;
 import com.couchbase.lite.Database;
 import com.couchbase.lite.Document;
+import com.couchbase.lite.Emitter;
+import com.couchbase.lite.Mapper;
 import com.couchbase.lite.Query;
 import com.couchbase.lite.QueryEnumerator;
 import com.couchbase.lite.QueryOptions;
@@ -43,11 +45,29 @@ public class CardLoader extends OakAsyncLoader<ArrayList<Card>> {
     @Override
     public ArrayList<Card> loadInBackground() {
         try {
-//            Log.d(MainApp.TAG, "START");
+
+            /*
+                Querying a Couchbase Lite database involves first creating a view that indexes the keys you’re interested in
+                and then running a query to get the results of the view for the key or range of keys you’re interested in.
+                The view is persistent, like a SQL index.
+
+                These key-value pairs get indexed, ordered by key, and can then be queried efficiently, again by key
+             */
+            com.couchbase.lite.View view = db.getView("loadAllCards");
+            view.setMap(new Mapper() {
+                /*
+                    A map that has the contents of the document being indexed.
+                    A function called emitter that takes the parameters key and value. This is the function your code calls to emit a key-value pair into the view’s index.
+                 */
+                @Override
+                public void map(Map<String, Object> stringObjectMap, Emitter emitter) {
+                    emitter.emit(stringObjectMap.get("name").toString(), stringObjectMap);
+                }
+            }, "1.0");
+
 //            db.getView("loadAllCards").createQuery().run();
             Query query1 = db.createAllDocumentsQuery();
             QueryEnumerator rowEnum = query1.run();
-//                    db.getView("loadAllCards").createQuery().run();
             ArrayList<Card> cards = new ArrayList<Card>();
             for (Iterator<QueryRow> it = rowEnum; it.hasNext();) {
                 QueryRow row = it.next();

@@ -3,6 +3,7 @@ package com.twochooseone.android.hearthstonehub.activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -173,8 +174,14 @@ public class HomeActivity extends HearthstoneBaseActivity implements View.OnClic
     }
 
     public void changeSelected(TextView nextSelected) {
-        selected.setBackgroundResource(R.drawable.drawer_pressed);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            selected.setBackgroundResource(R.drawable.drawer_pressed_ripple);
+        } else {
+            selected.setBackgroundResource(R.drawable.drawer_pressed);
+        }
+        selected.setTextColor(Color.WHITE);
         selected = nextSelected;
         selected.setBackgroundColor(getResources().getColor(R.color.pressed_grey));
+        selected.setTextColor(getResources().getColor(R.color.accent));
     }
 }

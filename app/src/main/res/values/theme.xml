@@ -4,7 +4,9 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="android:statusBarColor">#4D000000</item>
+        <item name="colorControlHighlight">#fff</item>
+        <item name="android:colorControlHighlight">#fff</item>
+        <item name="android:statusBarColor">#AD000000</item>
 
     </style>
 

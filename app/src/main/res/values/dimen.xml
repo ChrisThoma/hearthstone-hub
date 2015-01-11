@@ -7,4 +7,6 @@
     <dimen name="drawer_divider_padding">4dp</dimen>
     <dimen name="drawer_drawable_padding">20dp</dimen>
     <dimen name="extra_large_padding">30dp</dimen>
+
+    <dimen name="touch_raise">8dp</dimen>
 </resources>
