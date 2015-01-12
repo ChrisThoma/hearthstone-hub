@@ -3,4 +3,20 @@
     <string name="hello">Hello hearthstone-hub!</string>
     <string name="app_name">hearthstone-hub</string>
     <string name="okay">okay</string>
+    <string name="druid_caps">DRUID</string>
+    <string name="hunter_caps">HUNTER</string>
+    <string name="mage_caps">MAGE</string>
+    <string name="paladin_caps">PALADIN</string>
+    <string name="priest_caps">PRIEST</string>
+    <string name="rogue_caps">ROGUE</string>
+    <string name="shaman_caps">SHAMAN</string>
+    <string name="warlock_caps">WARLOCK</string>
+    <string name="warrior_caps">WARRIOR</string>
+    <string name="arena_rankings_title">Arena Card Rankings</string>
+    <string-array name="arena_rarities">
+        <item>COMMON</item>
+        <item>RARE</item>
+        <item>EPIC</item>
+        <item>LEGENDARY</item>
+    </string-array>
 </resources>

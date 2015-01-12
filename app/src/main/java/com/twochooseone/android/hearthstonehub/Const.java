@@ -24,4 +24,16 @@ public class Const {
     public static final String CARD_FLAVOR = "flavor";
     public static final String CARD_MECHANICS = "mechanics";
     public static final String CARD_ID = "id";
+
+    //class types for arena details
+    public static final String ARENA_CLASS = "arena_class";
+    public static final String DRUID = "druid";
+    public static final String HUNTER = "hunter";
+    public static final String MAGE = "mage";
+    public static final String PALADIN = "paladin";
+    public static final String PRIEST = "priest";
+    public static final String ROGUE = "rogue";
+    public static final String SHAMAN = "shaman";
+    public static final String WARLOCK = "warlock";
+    public static final String WARRIOR = "warrior";
 }

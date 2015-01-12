@@ -1,4 +1,5 @@
-<resources>
+<resources
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -37,4 +38,22 @@
         <item name="android:paddingLeft">15dp</item>
         <item name="android:paddingBottom">@dimen/default_padding</item>
     </style>
+
+    <style name="arenaTierCard" parent="CardView.Dark">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:stateListAnimator">@anim/raise</item>
+    </style>
+
+    <style name="arenaTierCardText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>

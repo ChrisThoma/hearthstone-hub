@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/less_dark_grey">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_actionbar"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/extra_large_padding"
+        android:paddingTop="@dimen/default_padding">
+
+        <ImageView
+            android:id="@+id/arena_detail_class_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp" />
+
+        <TextView
+            android:id="@+id/arena_detail_class_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/default_padding"
+            android:textColor="#fff"
+            android:textSize="@dimen/drawer_text_size" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/arena_detail_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/drawer_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -14,6 +14,7 @@ import com.twochooseone.android.hearthstonehub.Const;
 import com.twochooseone.android.hearthstonehub.Datastore;
 import com.twochooseone.android.hearthstonehub.MainApp;
 import com.squareup.okhttp.OkHttpClient;
+import com.twochooseone.android.hearthstonehub.activity.ArenaTiersDetailActivity;
 import com.twochooseone.android.hearthstonehub.activity.CardDetailActivity;
 import com.twochooseone.android.hearthstonehub.activity.DBInitializeActivity;
 import com.twochooseone.android.hearthstonehub.activity.HomeActivity;
@@ -38,7 +39,8 @@ import dagger.Provides;
         ArenaTiersFragment.class,
         NaxxramasFragment.class,
         DBInitializeActivity.class,
-        CardDetailActivity.class
+        CardDetailActivity.class,
+        ArenaTiersDetailActivity.class
 }, library = true, complete = true)
 public class AppModule {
     private final Application application;

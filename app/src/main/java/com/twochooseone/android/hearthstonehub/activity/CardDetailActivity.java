@@ -61,44 +61,52 @@ public class CardDetailActivity extends HearthstoneBaseActivity {
         setContentView(R.layout.activity_card_detail);
         ButterKnife.inject(this);
         setSupportActionBar(toolbar);
+
         card = gson.fromJson(getIntent().getExtras().getString(CARDJSON), Card.class);
         getSupportActionBar().setTitle(card.name);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         String url = String.format(IMAGEURL, card.id);
-        Log.d(MainApp.TAG, "card name: " + card.name + "\n" + "url " + url);
         Picasso.with(this)
                 .load(url)
                 .fit()
                 .into(image);
         name.setText(card.name);
+
         health.setText("" + card.health);
         mana.setText("" + card.cost);
         attack.setText("" + card.attack);
+
         if (!TextUtils.isEmpty(card.text)) {
             description.setText("Description: " + Html.fromHtml(card.text));
             description.setVisibility(View.VISIBLE);
         } else {
             description.setVisibility(View.GONE);
         }
+
         type.setText("Type: " + card.type);
+
         if (!TextUtils.isEmpty(card.playerClass)) {
             playerClass.setText("Class: " + card.playerClass);
             playerClass.setVisibility(View.VISIBLE);
         } else {
             playerClass.setVisibility(View.GONE);
         }
+
         if (!TextUtils.isEmpty(card.race)) {
             race.setText("Race: " + card.race);
             race.setVisibility(View.VISIBLE);
         } else {
             race.setVisibility(View.GONE);
         }
+
         if (!TextUtils.isEmpty(card.flavor)) {
             flavor.setText("Flavor: " + Html.fromHtml(card.flavor));
             flavor.setVisibility(View.VISIBLE);
         } else {
             flavor.setVisibility(View.GONE);
         }
+
         rarity.setText("Rarity: " + card.rarity);
     }
 

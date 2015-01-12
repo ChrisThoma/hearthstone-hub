@@ -64,27 +64,28 @@
             android:layout_marginRight="@dimen/drawer_divider_padding"
             android:background="@color/primary_extremely_light" />
 
+
+        <TextView
+        android:id="@+id/drawer_item_arena"
+        style="@style/drawerTextViewSubItem"
+        android:drawableLeft="@drawable/arena_img"
+        android:paddingLeft="11dp"
+        android:drawablePadding="34dp"
+        android:text="Arena Tiers" />
+
+        <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/drawer_divider_padding"
+        android:layout_marginRight="@dimen/drawer_divider_padding"
+        android:background="@color/primary_extremely_light" />
+
         <TextView
             android:id="@+id/drawer_item_naxx"
             style="@style/drawerTextViewSubItem"
             android:drawableLeft="@drawable/naxx_card_img"
             android:drawablePadding="40dp"
             android:text="Naxxramas" />
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="@dimen/drawer_divider_padding"
-            android:layout_marginRight="@dimen/drawer_divider_padding"
-            android:background="@color/primary_extremely_light" />
-
-        <TextView
-            android:id="@+id/drawer_item_arena"
-            style="@style/drawerTextViewSubItem"
-            android:drawableLeft="@drawable/arena_img"
-            android:paddingLeft="11dp"
-            android:drawablePadding="34dp"
-            android:text="Arena Tiers" />
 
         <View
             android:layout_width="fill_parent"
